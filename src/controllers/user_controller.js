@@ -76,6 +76,26 @@ async function get_user(req, res) {
     }
 }
 
+async function get_all_users(req, res) {
+    try {
+        const users = await Users.findAll();
+
+        if (!users) {
+            return res.status(404).json({
+                message: "Users not found."
+            });
+        }
+
+        return res.status(200).json(users);
+
+    } catch (error) {
+        console.error("Error fetching users!", error);
+        return res.status(500).json({
+            message: "Internal server error."
+        });
+    }
+}
+
 async function update_user(req, res) {
     try {
         const { id } = req.params;
@@ -160,6 +180,7 @@ async function delete_user(req, res) {
 module.exports = {
     create_user,
     get_user,
+    get_all_users,
     update_user,
     delete_user
 };
