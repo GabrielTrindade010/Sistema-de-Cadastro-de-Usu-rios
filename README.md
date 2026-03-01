@@ -3,7 +3,12 @@
 API RESTful para gerenciamento de usuários (**Create, Read, Update e Delete**) desenvolvida com **Node.js**, **Express** e **Sequelize (ORM)** para banco de dados relacional.
 
 📌 **Documentação completa no Postman:**  
+
 https://documenter.getpostman.com/view/37150133/2sBXcHgy4n
+
+📌 **Link da API:**
+
+https://api-cadastro-usuarios-swii.onrender.com/
 
 ---
 
